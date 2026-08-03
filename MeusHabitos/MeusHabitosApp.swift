@@ -8,10 +8,12 @@
 import SwiftUI
 
 @main
+
 struct MeusHabitosApp: App {
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashView(viewModel: SplashViewModel(interactor: SplashInteractor()))
         }
     }
 }
