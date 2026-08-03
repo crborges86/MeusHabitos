@@ -23,6 +23,7 @@ struct HabitResponse: Decodable {
         case iconUrl = "icon_url"
         case value
         case lastDate = "last_date"
+        
     }
     
 }
