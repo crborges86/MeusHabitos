@@ -68,6 +68,3 @@ struct ImageView_Previews: PreviewProvider {
     }
 }
 
-//teste
-//teste
-
