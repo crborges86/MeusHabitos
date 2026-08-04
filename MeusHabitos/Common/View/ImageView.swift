@@ -67,3 +67,7 @@ struct ImageView_Previews: PreviewProvider {
         ImageView(url: "http://google.com")
     }
 }
+
+//teste
+//teste
+
