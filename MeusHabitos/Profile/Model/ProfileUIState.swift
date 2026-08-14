@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+enum ProfileUIState {
+    case none
+    case loading
+    case fetchSuccess
+    case fetchError(String)
+}
