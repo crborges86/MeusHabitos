@@ -99,15 +99,39 @@ struct ProfileView: View {
                         }
                     }
                     .navigationBarTitle(Text("Editar Perfil"), displayMode: .automatic)
-                    .navigationBarItems(trailing: Button(action: {}, label: {
-                        Image(systemName: "checkmark")
-                            .foregroundColor(.greenR)
+                    .navigationBarItems(trailing: Button(action: {
+                        viewModel.updateUser()
+                    }, label: {
+                        if case ProfileUIState.updateLoading = viewModel.uiState {
+                            ProgressView()
+                        } else {
+                            Image(systemName: "checkmark")
+                                .foregroundColor(.greenR)
+                        }
                     })
+                        .alert(isPresented: .constant(viewModel.uiState == . updateSuccess)){
+                            Alert(title: Text("Rabbit"),
+                                  message: Text("Dados atualizados com sucesso"),
+                                  dismissButton: .default(Text("Ok")) {
+                                viewModel.uiState = .none
+                            })
+                        }
                         .opacity(disableDone ? 0 : 1)
                                         
                     )
                 }
             }
+            if case ProfileUIState.updateError(let value) = viewModel.uiState {
+                Text("")
+                    .alert(isPresented: .constant(true)) {
+                        Alert(title: Text("Rabbit"),
+                              message: Text(value),
+                              dismissButton: .default(Text("Ok")) {
+                            viewModel.uiState = .none
+                        })
+                    }
+            }
+            
                 if case ProfileUIState.fetchError(let value) = viewModel.uiState {
                     Text("")
                         .alert(isPresented: .constant(true)) {

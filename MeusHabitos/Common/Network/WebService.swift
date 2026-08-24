@@ -15,6 +15,7 @@ enum WebService {
     
     case postUser = "/users"
     case fetchUser = "/users/me"
+      case updateUser = "/users/%d"
     case login = "/auth/login"
     case refreshToken = "/auth/refresh-token"
       

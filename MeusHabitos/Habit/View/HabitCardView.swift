@@ -12,19 +12,30 @@ struct HabitCardView: View {
     
     @State private var action = false
     
+    let isChart: Bool
     let viewModel: HabitCardViewModel
     
     var body: some View {
 
         ZStack(alignment: .trailing) {
             
-            NavigationLink(
-                destination: viewModel.habitDetailView() ,
-                           isActive: self.$action,
-                           label: {
-                EmptyView()
-               }
-            )
+            if isChart {
+                NavigationLink(
+                    destination: viewModel.chartView() ,
+                    isActive: self.$action,
+                    label: {
+                        EmptyView()
+                    }
+                )
+            } else {
+                NavigationLink(
+                    destination: viewModel.habitDetailView() ,
+                    isActive: self.$action,
+                    label: {
+                        EmptyView()
+                    }
+                )
+            }
             
             Button(action: {
                 self.action = true
@@ -82,9 +93,12 @@ struct HabitCardView: View {
                 .cornerRadius(4.0)
                 
             })
+            
+            if !isChart{
                 Rectangle()
-                .frame(width: 8)
-                .foregroundColor(viewModel.state)
+                    .frame(width: 8)
+                    .foregroundColor(viewModel.state)
+            }
             
         }.background (
             RoundedRectangle(cornerRadius: 4.0)
@@ -102,7 +116,7 @@ struct HabitCardView_Previews: PreviewProvider {
       NavigationView {
         
         List {
-          HabitCardView(viewModel: HabitCardViewModel(id: 1,
+            HabitCardView(isChart: true, viewModel: HabitCardViewModel(id: 1,
                                                       icon: "https://via.placeholder.com/150",
                                                       date: "01/01/2021 00:00:00",
                                                       name: "Tocar guitarra",
@@ -111,7 +125,7 @@ struct HabitCardView_Previews: PreviewProvider {
                                                       state: .green,
                                                       habitPublisher: PassthroughSubject<Bool, Never>()))
           
-          HabitCardView(viewModel: HabitCardViewModel(id: 1,
+            HabitCardView(isChart: false, viewModel: HabitCardViewModel(id: 1,
                                                       icon: "https://via.placeholder.com/150",
                                                       date: "01/01/2021 00:00:00",
                                                       name: "Tocar guitarra",
