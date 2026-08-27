@@ -9,12 +9,15 @@ import SwiftUI
 import Charts
 
 struct ChartView: View {
+    
+    @ObservedObject var viewModel: ChartViewModel
+    
     var body: some View {
-        Text("Olá Gráficos")
+        BoxChartView(entries: $viewModel.entries, dates: $viewModel.dates)
+            .frame(maxWidth: .infinity, maxHeight: 350)
     }
 }
 
-
 #Preview {
-    ChartView()
+    ChartView(viewModel: ChartViewModel())
 }
