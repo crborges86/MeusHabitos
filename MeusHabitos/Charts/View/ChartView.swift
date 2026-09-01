@@ -17,7 +17,6 @@ struct ChartView: View {
             .frame(maxWidth: .infinity, maxHeight: 350)
     }
 }
-//teste
 
 #Preview {
     ChartView(viewModel: ChartViewModel())
