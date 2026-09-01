@@ -23,6 +23,7 @@ struct BoxChartView: UIViewRepresentable {
         uiView.xAxis.granularity = 1
         uiView.xAxis.labelPosition = .bottom
         uiView.rightAxis.enabled = false
+        uiView.xAxis.valueFormatter = DateAxisValueFormatter(dates: dates)
         uiView.leftAxis.axisLineColor = .green
         uiView.animate(yAxisDuration: 1.0)
         
@@ -67,6 +68,38 @@ struct BoxChartView: UIViewRepresentable {
     func updateUIView(_ uiView: LineChartView, context: Context) {
         uiView.data = addData()
         uiView.notifyDataSetChanged()
+    }
+}
+
+class DateAxisValueFormatter: AxisValueFormatter {
+    
+    let dates: [String]
+    
+    init(dates: [String]) {
+        self.dates = dates
+    }
+    
+    func stringForValue(_ value: Double, axis: AxisBase?) -> String {
+        let position = Int(value)
+        let df = DateFormatter()
+        df.locale = Locale(identifier: "en_US_POSIX")
+        df.dateFormat = "yyyy-MM-dd"
+        
+        if position > 0 && position < dates.count {
+            let date = df.date(from: dates[ position])
+            
+            guard let date = date else {
+                return ""
+            }
+            
+            let df = DateFormatter()
+            df.dateFormat = "dd/MM"
+            let createdAt = df.string(from: date)
+            
+            return createdAt
+        } else {
+            return ""
+        }
     }
 }
 
