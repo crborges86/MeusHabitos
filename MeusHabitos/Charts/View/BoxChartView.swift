@@ -47,9 +47,9 @@ struct BoxChartView: UIViewRepresentable {
         dataSet.lineWidth = 2
         dataSet.circleRadius = 4
         dataSet.setColor(.greenR)
-        dataSet.circleColors = [.red]
+        dataSet.circleColors = [.greenR]
         dataSet.drawFilledEnabled = true
-        dataSet.valueColors = [.red]
+        dataSet.valueColors = [.black]
         dataSet.drawHorizontalHighlightIndicatorEnabled = false
 
         if let gradient {

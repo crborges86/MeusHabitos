@@ -72,7 +72,7 @@ class HabitViewModel: ObservableObject {
                             
                             var state = Color.green
                             self.title = "Muito bom!"
-                            self.headline = "Seus hábitos estáo em dia"
+                            self.headline = "Seus hábitos estão em dia"
                             self.desc = ""
                             
                             let dateToCompare = $0.lastDate?.toDate(sourcePattern: "yyyy-MM-dd'T'HH:mm:ss") ?? Date()
@@ -101,3 +101,9 @@ class HabitViewModel: ObservableObject {
         }
         
     }
+
+extension HabitViewModel {
+    func habitCreateView() -> some View {
+        return HabitViewRouter.makeHabitCreateView(habitPublisher: habitPublisher)
+    }
+}
