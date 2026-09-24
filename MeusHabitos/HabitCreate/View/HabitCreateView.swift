@@ -26,11 +26,11 @@ struct HabitCreateView: View {
             
             VStack(alignment: .center, spacing: 12) {
                 
-                Button {
+                Button(action: {
                     self.shouldPresentCamera = true
-                } label: {
+                }, label: {
                     VStack {
-                        Image(systemName: "camera.fill")
+                        viewModel.image!
                             .resizable()
                             .scaledToFit()
                             .frame(width: 100, height: 100)
@@ -39,8 +39,14 @@ struct HabitCreateView: View {
                         Text("Clique aqui para enviar")
                             .foregroundColor(Color.greenR)
                     }
-                }
+                })
                 .padding(.bottom, 12)
+                .sheet(isPresented: $shouldPresentCamera) {
+                    ImagePickerView(image: self.$viewModel.image,
+                                    imageData: self.$viewModel.imageData,
+                                    isPresented: $shouldPresentCamera,
+                                    sourceType: .camera)
+                }
             }
                 
                 VStack {
