@@ -106,5 +106,5 @@ struct HabitCreateView: View {
 }
 
 #Preview {
-    HabitCreateView(viewModel: HabitCreateViewModel(interactor: HabitDetailInteractor()))
+    HabitCreateView(viewModel: HabitCreateViewModel(interactor: HabitCreateInteractor()))
 }
