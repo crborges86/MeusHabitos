@@ -25,7 +25,7 @@ Pessoas que querem desenvolver hábitos têm dificuldade em manter consistência
 | Falta de consistência | Acompanhar frequência | Histórico dos hábitos |
 | Não perceber evolução | Visualizar progresso | Gráficos |
 | Falta de organização | Centralizar hábitos | Lista de hábitos |
-| Perda de motivação | Perceber evolução | Indicadores e gráficos |
+| Perda de motivação | Perceber evolução | Gráficos |
 
 
 ### Hipótese do produto
