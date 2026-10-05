@@ -4,6 +4,39 @@ Aplicativo iOS desenvolvido em **Swift e SwiftUI** para gerenciamento e acompanh
 
 O projeto faz parte dos meus estudos em **Desenvolvimento iOS**, com foco na aplicação prática de conceitos de desenvolvimento de aplicativos para o ecossistema Apple.
 
+## Dores e necessidades do usuário
+
+Pessoas que querem desenvolver hábitos têm dificuldade em manter consistência e perceber sua evolução ao longo do tempo.
+
+### Principais dores
+
+- Esquecer de realizar determinados hábitos.
+- Ter dificuldade para manter uma rotina consistente.
+- Não saber se está realmente evoluindo.
+- Não conseguir visualizar a frequência com que realiza determinado hábito.
+- Perder a motivação quando não percebe resultados no curto prazo.
+- Ter informações espalhadas ou depender apenas da memória para acompanhar a rotina
+
+### Necessidades do usuário
+
+| Dor | Necessidade | Funcionalidade |
+
+| -------- | -------- | -------- |
+
+| Esquecer hábitos | Lembrar e registrar a rotina | Cadastro e lançamento de hábitos |
+
+| Falta de consistência | Acompanhar frequência | Histórico dos hábitos |
+
+| Não perceber evolução | Visualizar progresso | Gráficos |
+
+| Falta de organização | Centralizar hábitos | Lista de hábitos |
+
+| Perda de motivação | Perceber evolução | Indicadores e gráficos |
+
+
+### Hipótese do produto
+Se o usuário conseguir registrar seus hábitos e visualizar sua evolução de forma simples, ele terá maior percepção de progresso e poderá desenvolver maior consistência na realização desses hábitos.
+
 ## Sobre o projeto
 
 O Meus Hábitos foi desenvolvido com o objetivo de criar uma aplicação simples e intuitiva para auxiliar o usuário no acompanhamento de seus hábitos.
