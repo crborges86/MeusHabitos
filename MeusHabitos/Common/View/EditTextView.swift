@@ -16,6 +16,7 @@ struct EditTextView: View {
     var error: String? = nil
     var failure: Bool? = nil
     var isSecure: Bool = false
+    var autocaptalization: UITextAutocapitalizationType = .none
     
     var body: some View {
         VStack{
@@ -29,6 +30,7 @@ struct EditTextView: View {
                 TextField(placeholder, text: $text)
                     .foregroundColor(Color("textColor"))
                     .keyboardType(keyboard)
+                    .autocapitalization(autocaptalization)
                     .textFieldStyle(CustomTextFieldStyle())
             }
             

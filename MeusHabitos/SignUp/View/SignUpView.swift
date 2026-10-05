@@ -65,7 +65,8 @@ extension SignUpView {
                  placeholder: "Entre com seu nome completo *",
                  keyboard: .alphabet,
                  error: "Nome deve ter mais de 3 caracteres",
-                 failure: viewModel.fullName.count < 3)
+                 failure: viewModel.fullName.count < 3,
+                 autocaptalization: .words)
   }
 }
 
