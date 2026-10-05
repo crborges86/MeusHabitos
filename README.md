@@ -37,6 +37,11 @@ Durante o desenvolvimento, são aplicados conceitos de:
 - Git
 - GitHub
 
+## Dependências e ferramentas
+
+- CocoaPods
+- Charts
+
 ## Arquitetura
 
 O projeto utiliza o padrão **MVVM (Model-View-ViewModel)**, buscando separar as responsabilidades da aplicação e facilitar sua manutenção e evolução.
@@ -78,7 +83,7 @@ O projeto utiliza o padrão **MVVM (Model-View-ViewModel)**, buscando separar as
 
 ## Requisitos
 
-- iOS 18 ou superior
+- iOS 15.6 ou superior
 
 ## Objetivos de aprendizagem
 
