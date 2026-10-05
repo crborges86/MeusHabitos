@@ -58,7 +58,7 @@ struct SignInView: View {
             if case SignInUIState.error(let value) = viewModel.uiState {
               Text("")
                 .alert(isPresented: .constant(true)) {
-                  Alert(title: Text("Rabbit"), message: Text(value), dismissButton: .default(Text("Ok")) {
+                  Alert(title: Text("Meus Hábitos"), message: Text(value), dismissButton: .default(Text("Ok")) {
                     // faz algo quando some o alerta
                   })
                 }

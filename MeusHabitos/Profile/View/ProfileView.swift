@@ -110,7 +110,7 @@ struct ProfileView: View {
                         }
                     })
                         .alert(isPresented: .constant(viewModel.uiState == . updateSuccess)){
-                            Alert(title: Text("Rabbit"),
+                            Alert(title: Text("Meus Hábitos"),
                                   message: Text("Dados atualizados com sucesso"),
                                   dismissButton: .default(Text("Ok")) {
                                 viewModel.uiState = .none
@@ -124,7 +124,7 @@ struct ProfileView: View {
             if case ProfileUIState.updateError(let value) = viewModel.uiState {
                 Text("")
                     .alert(isPresented: .constant(true)) {
-                        Alert(title: Text("Rabbit"),
+                        Alert(title: Text("Meus Hábitos"),
                               message: Text(value),
                               dismissButton: .default(Text("Ok")) {
                             viewModel.uiState = .none
@@ -135,7 +135,7 @@ struct ProfileView: View {
                 if case ProfileUIState.fetchError(let value) = viewModel.uiState {
                     Text("")
                         .alert(isPresented: .constant(true)) {
-                            Alert(title: Text("Rabbit"),
+                            Alert(title: Text("Meus Hábitos"),
                                   message: Text(value),
                                   dismissButton: .default(Text("Ok")) {
                             })
