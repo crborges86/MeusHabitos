@@ -10,27 +10,21 @@ Pessoas que querem desenvolver hábitos têm dificuldade em manter consistência
 
 ### Principais dores
 
-- Esquecer de realizar determinados hábitos.
-- Ter dificuldade para manter uma rotina consistente.
-- Não saber se está realmente evoluindo.
-- Não conseguir visualizar a frequência com que realiza determinado hábito.
-- Perder a motivação quando não percebe resultados no curto prazo.
+- Esquecer de realizar determinados hábitos
+- Ter dificuldade para manter uma rotina consistente
+- Não saber se está realmente evoluindo
+- Não conseguir visualizar a frequência com que realiza determinado hábito
+- Perder a motivação quando não percebe resultados no curto prazo
 - Ter informações espalhadas ou depender apenas da memória para acompanhar a rotina
 
 ### Necessidades do usuário
 
 | Dor | Necessidade | Funcionalidade |
-
 | -------- | -------- | -------- |
-
 | Esquecer hábitos | Lembrar e registrar a rotina | Cadastro e lançamento de hábitos |
-
 | Falta de consistência | Acompanhar frequência | Histórico dos hábitos |
-
 | Não perceber evolução | Visualizar progresso | Gráficos |
-
 | Falta de organização | Centralizar hábitos | Lista de hábitos |
-
 | Perda de motivação | Perceber evolução | Indicadores e gráficos |
 
 
