@@ -79,7 +79,7 @@ O projeto utiliza o padrão **MVVM (Model-View-ViewModel)**, buscando separar as
 
 <p align="center">
   <img src="screenshots/signin.png" width="250">
-  <img src="screenshots/signup.png" width="250">
+  <img src="screenshots/signup1.png" width="250">
 </p>
 
 
