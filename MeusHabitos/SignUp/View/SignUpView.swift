@@ -95,9 +95,10 @@ extension SignUpView {
   var documentField: some View {
     EditTextView(text: $viewModel.document,
                  placeholder: "Entre com seu CPF *",
+                 mask: "###.###.###-##",
                  keyboard: .numberPad,
                  error: "CPF inválido",
-                 failure: viewModel.document.count != 11)
+                 failure: viewModel.document.count != 14)
     // TODO: mask
     // TODO: isDisabled
   }
@@ -107,9 +108,10 @@ extension SignUpView {
   var phoneField: some View {
     EditTextView(text: $viewModel.phone,
                  placeholder: "Entre com seu celular *",
+                 mask: "(##) ####-####",
                  keyboard: .numberPad,
                  error: "Entre com o DDD + 8 ou 9 digitos",
-                 failure: viewModel.phone.count < 10 || viewModel.phone.count >= 12)
+                 failure: viewModel.phone.count < 14 || viewModel.phone.count > 15)
     // TODO: mask
   }
 }
@@ -118,7 +120,8 @@ extension SignUpView {
   var birthdayField: some View {
     EditTextView(text: $viewModel.birthday,
                  placeholder: "Entre com com sua data de nascimento *",
-                 keyboard: .default,
+                 mask: "##/##/####",
+                 keyboard: .numberPad,
                  error: "Data deve ser dd/MM/yyyy",
                  failure: viewModel.birthday.count != 10)
     // TODO: mask
@@ -148,8 +151,8 @@ extension SignUpView {
     disabled: !viewModel.email.isEmail() ||
       viewModel.password.count < 8 ||
       viewModel.fullName.count < 3 ||
-      viewModel.document.count != 11 ||
-      viewModel.phone.count < 10 || viewModel.phone.count >= 12 ||
+      viewModel.document.count != 14 ||
+      viewModel.phone.count < 14 || viewModel.phone.count > 15 ||
       viewModel.birthday.count != 10)
   }
 }
