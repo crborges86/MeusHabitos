@@ -103,7 +103,7 @@ O projeto utiliza o padrão **MVVM (Model-View-ViewModel)**, buscando separar as
 ### Perfil
 
 <p align="center">
-  <img src="screenshots/profileedit.png" width="250">
+  <img src="screenshots/profileedit1.png" width="250">
   <img src="screenshots/profileeditalert.png" width="250">
 </p>
 
