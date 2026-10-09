@@ -53,7 +53,6 @@ struct HabitCreateView: View {
                     TextField("Escreva aqui o nome do hábito", text: $viewModel.name)
                         .multilineTextAlignment(.center)
                         .textFieldStyle(PlainTextFieldStyle())
-                        .keyboardType(.numberPad)
                     
                     Divider()
                         .frame(height: 1)
