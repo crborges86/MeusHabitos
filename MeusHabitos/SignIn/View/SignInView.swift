@@ -137,6 +137,6 @@ extension SignInView {
 }
 
 #Preview {
-    SignInView(viewModel: SignInViewModel(interactor: SignInInteractor()))
+    SignInView(viewModel: SignInViewModel(interactor: SignInInteractor(), homeViewModel: HomeViewModel()))
         .preferredColorScheme(.light)
 }
